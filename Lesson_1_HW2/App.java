@@ -1,5 +1,7 @@
 package Lesson_1_HW2;
 
+import Lesson_1_HW.CanOvercome;
+
 public class App {
     public static void main(String[] args) {
         Person cat1 = new Cat("Cat-1", 5, 10);
@@ -17,7 +19,7 @@ public class App {
 
         for (Obstacle obstacle: obstacles){
             for (Moving moving: movings){
-
+                moving.jump(obstacle);
             }
         }
     }
