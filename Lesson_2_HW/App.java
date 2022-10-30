@@ -13,7 +13,7 @@ public class App {
         };
 
         try {
-            System.out.println("Summ nums of Array = " + convertArray(arr));
+            System.out.println("Sum numbs of Array = " + convertArray(arr));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println("Handle: " + e.getMessage());
         }
