@@ -17,12 +17,14 @@ public class App {
         GettingObstacle[] gettingObstacles = new GettingObstacle[] {cat1, cat2, cat3, human, robot};
         Obstacle[] obstacles = new Obstacle[]{wall_5,treadmill_10,wall_6,treadmill_20,wall_7,treadmill_30};
 
-        for (Obstacle obstacle: obstacles){
+        for (Obstacle obstacle: obstacles) {
             if (obstacle instanceof Wall) System.out.println(String.format("-----> Wall %d", obstacle.getParam()));
-            if (obstacle instanceof Treadmill) System.out.println(String.format("-----> Treadmill %d", obstacle.getParam()));
-            for (GettingObstacle gettingObstacle : gettingObstacles){
+            if (obstacle instanceof Treadmill)
+                System.out.println(String.format("-----> Treadmill %d", obstacle.getParam()));
+            for (GettingObstacle gettingObstacle : gettingObstacles) {
                 gettingObstacle.takeAnObstacle(obstacle);
             }
         }
     }
+
 }
