@@ -25,7 +25,7 @@ public class App {
 
     }
 
-    static int convertArray(String[][] arr) throws MyArrayDataException, MyArraySizeException {
+    static int convertArray(String[][] arr) {
         checkArrLength(arr);
         System.out.println("Size of Array is OK");
         System.out.println(Arrays.deepToString(arr));
@@ -46,7 +46,7 @@ public class App {
         return sum;
     }
 
-    static void checkArrLength(String[][] arr) throws MyArraySizeException {
+    static void checkArrLength(String[][] arr) {
         if (arr.length != LENGTH)
             throw new MyArraySizeException(String.format("Error size column Array[%d][]", arr.length));
         for (int i = 0; i < arr.length; i++) {
