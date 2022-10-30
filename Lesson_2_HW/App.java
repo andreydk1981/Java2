@@ -20,7 +20,7 @@ public class App {
             ERROR = true;
             System.out.println("Handle: " + e.getMessage());
         } finally {
-            System.out.println(String.format("Program finished %s", ERROR ? "with ERROR" : "OK"));
+            System.out.printf("Program finished %s%n", ERROR ? "with ERROR" : "OK");
         }
 
     }
@@ -37,7 +37,7 @@ public class App {
                 try {
                     num = Integer.parseInt(arr[i][j]);
                     sum += num;
-                } catch (NumberFormatException exception) {
+                } catch (NumberFormatException e) {
                     ERROR = true;
                     throw new MyArrayDataException(String.format("Not a num in Arr[%d][%d]", i, j));
                 }
