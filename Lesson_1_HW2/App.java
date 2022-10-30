@@ -2,11 +2,11 @@ package Lesson_1_HW2;
 
 public class App {
     public static void main(String[] args) {
-        Person cat1 = new Cat("Cat-1", 5, 10);
-        Person cat2 = new Cat("Cat-2", 6, 20);
-        Person cat3 = new Cat("Cat-3", 7, 30);
-        Person human = new Human("Human", 7, 10);
-        Person robot = new Robot("Robot", 7, 30);
+        Cat cat1 = new Cat("Cat-1", 5, 10);
+        Cat cat2 = new Cat("Cat-2", 6, 20);
+        Cat cat3 = new Cat("Cat-3", 7, 30);
+        Human human = new Human("Human", 7, 10);
+        Robot robot = new Robot("Robot", 7, 30);
         Obstacle wall_5 = new Wall(5);
         Obstacle wall_6 = new Wall(6);
         Obstacle wall_7 = new Wall(7);

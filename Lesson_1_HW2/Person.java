@@ -1,6 +1,6 @@
 package Lesson_1_HW2;
 
-public abstract class Person implements Moving, GettingObstacle, PosiblNext {
+public abstract class Person implements GettingObstacle {
     private final String name;
     private final int jumpHeight;
     private final int runLength;
