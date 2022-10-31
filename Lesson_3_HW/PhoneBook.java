@@ -2,24 +2,30 @@ package Lesson_3_HW;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class PhoneBook {
-    private Map<String, String> book = new HashMap<>();
+    private final Map<String, String> book = new HashMap<>();
 
-    public void add(String firstName, String number) {
-        if(this.book.containsKey(number)) System.out.println("number " + number +" is already taken by " + this.book.get(number));
-        else this.book.put(number, firstName);
+    public String add(String lastName, String number) {
+        if (this.book.containsKey(number))
+            return String.format("number %s is already taken by %s", number, this.book.get(number));
+        else {
+            this.book.put(number, lastName);
+            return String.format("Add %s %s successful", lastName, number);
+        }
     }
 
-    public void get(String firstName) {
-        if (this.book.containsValue(firstName)) {
-            System.out.print(firstName + ": ");
+    public StringBuffer get(String lastName) {
+        StringBuffer message = new StringBuffer(lastName + ": ");
+        if (this.book.containsValue(lastName)) {
+
             for (Map.Entry line : this.book.entrySet()) {
-                if (line.getValue().equals(firstName)) System.out.print(line.getKey() + " ");
+                if (line.getValue().equals(lastName))  message.append((line.getKey() + " "));
             }
-            System.out.println();
-        } else System.out.println(firstName + " Not found in this phonebook");
+        } else {message.append("Not found in this phonebook");
+            return message;
+        }
+        return message;
     }
 
     public void list() {
